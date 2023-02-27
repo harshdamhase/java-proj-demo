@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+</head>
+<body bgcolor="creamy">
+<font FACE="italic" Size="20" COLOR="black"><center><U>Customer Registration</U><br>
+<body>
+<form action="Registration.jsp" method="post">
+<h5>Customer Name:<input type="text" name="name" placeholder="Enter your Name" required><br>
+Address:<input type="text" name="name" placeholder="Enter your address" required><br>
+Mobile:<input type="text" name="mobile" placeholder="Enter your mobile no" required><br>
+Email:<input type="text" name="email" placeholder="Enter your email" required><br>
+Password:<input type="password" name="password" placeholder="Enter your password" required><br>
+<input type="Submit" value="Submit"></h5></center>
+<!-- <%
+String name=request.getParameter("name");
+String address=request.getParameter("address");
+String mobile =request.getParameter("mobile");
+String email=request.getParameter("email");
+String Password=request.getParameter("password");
+try 
+{
+if(name!=null && email!=null && mobile!=null && Password!=null)
+{
+String sql="insert into admin values('"+email+"','"+address+"','"+mobile+"','"+name+"','"+Password+"')";
+String check="select email from admin where email='"+email+"'";
+Class.forName("org.postgresql.Driver");
+Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","mygh");
+Statement st=con.createStatement();
+ResultSet rs=st.executeQuery(check);
+if(rs.next())
+{%>
+	<script type="text/javascript">
+     alert("Already Registered!!!");
+</script>
+<%}else
+{
+ResultSet a=st.executeQuery(sql);	
+%>
+<jsp:forward page="Adminlogin.jsp" />
+<% 	
+con.close();
+}
+}
+}
+catch(Exception e)
+{
+out.print("Error Occured!!"+e);
+}
+%> -->
+</form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="java.sql.*"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Bakery Products</title>
+</head>
+<body>
+
+<body>
+	<U><h1>Products</h1></U>
+	<!-- <table>
+	<tr>		
+		<th>Product Name</th>
+         <th>Price</th>         
+         <th>Quantity</th>
+            </tr>
+            <%
+            String email=(String) session.getAttribute("email");
+            String sql="select * from product";
+            Class.forName("org.postgresql.Driver");
+            Connection con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","mygh");
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next())
+            { 
+            	String product=rs.getString(1);
+            %>
+			<tr>
+				<td><%out.print(product); %></td>
+				<td><%out.print(rs.getString(2)); %></td>
+				<td><form action="bakery_products.jsp" method="post">
+				<input type="text" name="quant">
+				<input type="hidden" name="pname" value=<%=product %>>
+				<input type="hidden" name="price" value=<%=rs.getString(2) %>>
+				<input type="submit" value="Buy">
+				</form>
+				</td>
+             </tr>
+             <%
+            }
+            String quantity=request.getParameter("quant");
+            String pname=request.getParameter("pname");
+            String price=request.getParameter("price");
+            if(quantity!=null && pname!=null && price!=null)
+            {
+            	int amount=Integer.parseInt(quantity) * Integer.parseInt(price);
+            	String insert="insert into buy values('"+email+"','"+pname+"','"+price+"','"+amount+"')";
+            	st.executeUpdate(insert);
+            	out.print("Booked!!!");
+            }
+             %>
+             </table>
+              -->
+
+
+</body>
+</html>

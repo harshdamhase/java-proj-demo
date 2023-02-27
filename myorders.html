@@ -1,0 +1,42 @@
+<!-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" import="java.sql.*"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My orders</title>
+</head>
+<body bgcolor="orange">
+
+<body>
+	<center><U><h1>Products</h1></U>
+	<table border="1">
+	<tr>		
+		<th>Product Name</th>
+		<th>Quantity</th>
+         <th>Price</th>         
+            </tr></center>
+            <!-- <%
+            String email=(String) session.getAttribute("email");
+            String sql="select * from buy where cname='"+email+"'";
+            Class.forName("org.postgresql.Driver");
+            Connection con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","mygh");
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next())
+            { 
+            %>
+			<tr>
+				<td><%out.print(rs.getString(2)); %></td>
+				<td><%out.print(rs.getString(3)); %></td>
+				<td><%out.print(rs.getString(4)); %></td>
+             </tr>
+           <%
+           }
+           %> -->
+             </table>
+             
+
+
+</body>
+</html>
