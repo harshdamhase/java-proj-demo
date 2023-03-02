@@ -10,14 +10,23 @@
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
   <style>
     body {
-      background-image: url('main.jpg');
+      background: url('main.jpg');
       background-size: cover;
+      background-repeat: no-repeat;
       margin: 0;
       padding: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.183);
+
+
     }
 
     .navbar {
       background-color: #96b3f6;
+      width: 100%;
+      position: sticky;
+      top: 0px;
+
     }
 
     .navbar-container {
@@ -26,12 +35,14 @@
       text-align: center;
       align-items: center;
       height: 14vh;
-      box-shadow:0px 2px 10px 4px black ;
+      box-shadow: 0px 2px 7px 1px black;
+
+
     }
 
     .navbar-brand-title {
       text-decoration: none;
-      color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       font-weight: 600;
       margin: 10px;
       padding: 10px;
@@ -41,7 +52,7 @@
     }
 
     .navbar-brand-title:hover {
-      color: black;
+      color: rgb(255, 255, 255);
       transform: scalex(1.1);
 
 
@@ -59,8 +70,8 @@
       display: flex;
       align-items: center;
       text-align: center;
-      margin: 10px; 
-       padding: 10px;
+      margin: 10px;
+      padding: 10px;
     }
 
     .nav-item {
@@ -73,7 +84,7 @@
     .nav-link {
       text-decoration: none;
       /* background-color: #fff; */
-      color: white;
+      color: black;
       padding: 8px;
       border-radius: 4px;
       transition: all 0.6s ease-in-out;
@@ -85,6 +96,105 @@
       background-color: #0000001f;
       color: #fff;
     }
+
+    .cake-title {
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.183);
+      align-items: center;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 0px;
+
+      padding: 10px;
+    }
+
+    .cake-title h1 {
+      display: block;
+      font-size: 85px;
+      color: #fff;
+      margin-top: 40px;
+      margin-bottom: 5px;
+    }
+
+    .cake-title h2 {
+      display: block;
+      font-size: 22px;
+      color: #fff;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .our-cakes-btn {
+      display: block;
+      height: 56px;
+      width: 17%;
+      margin-top: 20px;
+      margin-bottom: 80px;
+      border-radius: 39px;
+      outline: none;
+      font-size: 28px;
+      color: black;
+      font-weight: 500;
+      transition: all 0.6s ease-in-out;
+      border: none;
+      background-color: yellow;
+    }
+
+    .our-cakes-btn:hover {
+
+      background-color: #fa83d1;
+    }
+
+    .ab-container {
+      display: flex;
+      background-color: #fff;
+      height: 600px;
+      justify-content: center;
+    }
+
+    .ab-box {
+      /* width: 40%; */
+      width: 500px;
+      margin-top: 85px;
+
+    }
+
+
+    .ab-title-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+    }
+
+    .ab-title-box h1 {
+      font-size: 55px;
+
+    }
+
+    .ab-title-box p {
+      font-size: 23px;
+      text-align: start;
+      word-spacing: 1px;
+    }
+
+    .ab-btn {
+      display: block;
+      height: 56px;
+      width: 50%;
+      border-radius: 39px;
+      outline: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      transition: all 0.6s ease-in-out;
+      border: none;
+      background-color: #f7cb4a;
+    }
+
+    .ab-btn:hover {
+      background-color: #96b3f6;
+    }
   </style>
 </head>
 
@@ -92,9 +202,8 @@
   <nav class="navbar">
     <div class="navbar-container">
       <a class="navbar-brand-title" href="#">Bakery Products</a>
-      <button class="navbar-toggler-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+      <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -124,8 +233,35 @@
       </div>
     </div>
   </nav>
-  <!-- <center><br><br><br><br>
-<blink><FONT FACE="Italic" SIZE="55" COLOR="black"><b><mark><marquee>**********WELCOME  TO  BAKERY  SHOP**********</marquee></mark></b></FONT></blink></center> -->
+
+  <section>
+    <div class="cake-title">
+      <h1>The Best Cakes <br> and Breads</h1>
+      <h2>A cake is happiness of your birthday</h2>
+      <button class="our-cakes-btn">Our Cakes</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="ab-container">
+
+      <div class="ab-box" id="anim-box">
+        <img src="img/index-img/welcome.png" alt="">
+      </div>
+      <div class="ab-box">
+        <div class="ab-title-box">
+          <h1>Welcome to <br>
+            Cake the bakery</h1>
+          <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but
+            because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take
+            a trivial example, which of us ever undertakes laborious physical exercise.</p>
+          <button class="ab-btn">About US</button>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
 </body>
 
 </html>
